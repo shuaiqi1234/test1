@@ -69,7 +69,17 @@ void CtestMFCView::OnDraw(CDC* pDC)
 	if (!pDoc)
 		return;
 	//const CString strVar = ;
-	pDC->TextOutW(100, 50, _T("版本2."));
+	pDC->TextOutW(100, 50, _T("版本3."));
+	CRect rectFill = { 300, 100, 600, 200 };
+	//CBrush aBrush;
+	//aBrush.CreateSysColorBrush(COLOR_BTNHIGHLIGHT);
+	//CBrush *oldBrush = pDC->SelectObject(&aBrush);
+	//pDC->FillRect(rectFill, &aBrush);
+	//pDC->SelectObject(oldBrush);
+	COLORREF	clr = 0x00aa3010;;
+	pDC->FillSolidRect(rectFill, clr);
+
+
 	// TODO:  在此处为本机数据添加绘制代码
 }
 
