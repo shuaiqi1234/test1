@@ -62,13 +62,14 @@ BOOL CtestMFCView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CtestMFCView 绘制
 
-void CtestMFCView::OnDraw(CDC* /*pDC*/)
+void CtestMFCView::OnDraw(CDC* pDC)
 {
 	CtestMFCDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-
+	//const CString strVar = ;
+	pDC->TextOutW(100, 50, _T("版本2."));
 	// TODO:  在此处为本机数据添加绘制代码
 }
 
